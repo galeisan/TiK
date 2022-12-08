@@ -1,12 +1,16 @@
-import java.lang.reflect.Type;
+import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
-public class Books {
-    public static void main(String[] args){
-        List<String> alp = new ArrayList<>(List.of("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"));
+public class MTF {
+    public static void main(String[] args) throws IOException {
+        File file = new File("src/main/java/file/mtf.txt");
+        FileReader fr = new FileReader(file);
+        BufferedReader reader = new BufferedReader(fr);
+        String str = reader.readLine();
+        String[] strSplit = str.split(" ");
+        List<String> alp = new ArrayList<String>(Arrays.asList(strSplit)).stream().sorted().collect(Collectors.toList());
 
         Scanner sc = new Scanner(System.in);
         String message = sc.nextLine();
