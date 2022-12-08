@@ -4,7 +4,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Books {
+public class MTW {
     public static void main(String[] args){
         List<String> alp = new ArrayList<>(List.of("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"));
 
